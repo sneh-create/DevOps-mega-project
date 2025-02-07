@@ -1,0 +1,12 @@
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRoleBinding
+metadata:
+  name: flux-applier-pv-binding
+subjects:
+  - kind: ServiceAccount
+    name: flux-applier
+    namespace: bankapp-namespace
+roleRef:
+  kind: ClusterRole
+  name: persistent-volume-editor
+  apiGroup: rbac.authorization.k8s.io
