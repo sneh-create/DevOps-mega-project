@@ -12,6 +12,8 @@ metadata:
     nginx.ingress.kubernetes.io/affinity: cookie
     nginx.ingress.kubernetes.io/session-cookie-name: bankapp_session
     nginx.ingress.kubernetes.io/session-cookie-hash: sha1
+    appgw.ingress.kubernetes.io/cookie-based-affinity: "true"
+
 spec:
   ingressClassName: azure-application-gateway
   rules:
