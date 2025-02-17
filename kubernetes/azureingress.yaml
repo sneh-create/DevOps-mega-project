@@ -17,8 +17,7 @@ metadata:
 spec:
   ingressClassName: azure-application-gateway
   rules:
-  - host: bankapp.snehaws.com
-    http:
+  - http:
       paths:
       - path: /
         pathType: Prefix
